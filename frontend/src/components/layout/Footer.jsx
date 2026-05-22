@@ -9,8 +9,10 @@ export default function Footer() {
 
   const links = [
     { to: "/about", label: t("nav_about") },
+    { to: "/sankalp", label: t("nav_sankalp") },
     { to: "/leaders", label: t("nav_leaders") },
     { to: "/news", label: t("nav_news") },
+    { to: "/gallery", label: t("nav_gallery") },
     { to: "/join", label: t("nav_join") },
     { to: "/contact", label: t("nav_contact") },
     { to: "/admin/login", label: t("nav_admin") },

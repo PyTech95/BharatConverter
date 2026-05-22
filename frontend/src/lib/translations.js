@@ -3,15 +3,18 @@ export const translations = {
   hi: {
     // Brand
     party_name: "बुलंद भारत पार्टी",
-    party_tagline: "एक बुलंद भारत के निर्माण की ओर",
+    party_tagline: "एकता, सौहार्द और विकास का संकल्प",
+    election_symbol: "चुनाव चिन्ह — गैस सिलेंडर",
     jai_hind: "जय हिन्द",
     vande_mataram: "वंदे मातरम्",
 
     // Nav
     nav_home: "मुख्य पृष्ठ",
     nav_about: "हमारे बारे में",
+    nav_sankalp: "विकास संकल्प",
     nav_leaders: "नेतृत्व",
     nav_news: "समाचार",
+    nav_gallery: "तस्वीरें",
     nav_join: "सदस्यता",
     nav_contact: "संपर्क",
     nav_admin: "व्यवस्थापक",
@@ -138,15 +141,18 @@ export const translations = {
   en: {
     // Brand
     party_name: "Buland Bharat Party",
-    party_tagline: "Towards a Stronger India",
+    party_tagline: "Pledge of Unity, Harmony and Development",
+    election_symbol: "Election Symbol — Gas Cylinder",
     jai_hind: "Jai Hind",
     vande_mataram: "Vande Mataram",
 
     // Nav
     nav_home: "Home",
     nav_about: "About",
+    nav_sankalp: "Sankalp",
     nav_leaders: "Leadership",
     nav_news: "News",
+    nav_gallery: "Gallery",
     nav_join: "Join Us",
     nav_contact: "Contact",
     nav_admin: "Admin",

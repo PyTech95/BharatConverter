@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sprout, Briefcase, GraduationCap, ShieldCheck, ChevronRight, Quote } from "lucide-react";
+import { ArrowRight, Sprout, Briefcase, GraduationCap, ShieldCheck, ChevronRight, Quote, Camera } from "lucide-react";
 import { useLang } from "../contexts/LanguageContext";
-import { api, HERO_CROWD_IMG, ASHOKA_TEXTURE, PARTY_LOGO, FLAG_IMG } from "../lib/api";
+import { api, HERO_CROWD_IMG, ASHOKA_TEXTURE, PARTY_LOGO, FLAG_IMG, GALLERY_PHOTOS, PHOTO_POSTER } from "../lib/api";
 
 export default function HomePage() {
   const { lang, t } = useLang();
@@ -143,6 +143,67 @@ export default function HomePage() {
               : "\"The true power of democracy is the people. When the people awaken, history changes.\""}
           </blockquote>
           <div className="tricolor-strip-horizontal h-1 w-32 mx-auto mt-8" />
+        </div>
+      </section>
+
+      {/* ELECTION SYMBOL + Sankalp teaser */}
+      <section className="py-20 bg-bharat-cream relative" data-testid="symbol-section">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-5">
+            <div className="bg-white border border-bharat-ink/10 p-6 shadow-[8px_8px_0_0_rgba(255,153,51,0.25)]">
+              <img src={PHOTO_POSTER} alt="Election symbol poster" className="w-full h-auto" data-testid="election-poster" />
+            </div>
+          </div>
+          <div className="lg:col-span-7">
+            <div className={`text-sm uppercase tracking-[0.3em] text-saffron font-bold mb-4 editorial-line ${hiClass}`}>
+              {lang === "hi" ? "चुनाव चिन्ह" : "Election Symbol"}
+            </div>
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-bharat-ink ${hiHeadingClass}`} data-testid="symbol-title">
+              {lang === "hi" ? "गैस सिलेंडर पर मतदान करें" : "Vote for the Gas Cylinder"}
+            </h2>
+            <p className={`mt-5 text-lg text-bharat-ink/80 leading-relaxed max-w-2xl ${hiClass}`}>
+              {lang === "hi"
+                ? "बुलंद भारत पार्टी का चुनाव चिन्ह — गैस सिलेंडर। राष्ट्रीय अध्यक्ष श्री कुणाल कान्त शर्मा के नेतृत्व में, फरीदाबाद लोकसभा क्षेत्र से उम्मीदवार श्री सत्य देव यादव।"
+                : "The election symbol of Buland Bharat Party — Gas Cylinder. Under the leadership of National President Shri Kunal Kant Sharma, with Shri Satya Dev Yadav as candidate from Faridabad Lok Sabha."}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link to="/sankalp" className="inline-flex items-center gap-2 bg-bharat-ink text-white px-7 py-3.5 font-bold btn-sharp hover:bg-saffron" data-testid="home-sankalp-cta">
+                {lang === "hi" ? "विकास संकल्प पढ़ें" : "Read Development Pledge"} <ArrowRight size={16} />
+              </Link>
+              <Link to="/leaders" className="inline-flex items-center gap-2 border-2 border-bharat-ink text-bharat-ink px-7 py-3.5 font-bold btn-sharp hover:bg-bharat-ink hover:text-white" data-testid="home-leaders-cta">
+                {lang === "hi" ? "नेतृत्व देखें" : "Meet the Leaders"}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY PREVIEW */}
+      <section className="py-20 bg-white" data-testid="gallery-preview">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+            <div>
+              <div className={`text-sm uppercase tracking-[0.3em] text-saffron font-bold mb-3 editorial-line ${hiClass}`}>
+                {t("nav_gallery")}
+              </div>
+              <h2 className={`text-4xl md:text-5xl font-bold tracking-tight text-bharat-ink ${hiHeadingClass}`}>
+                {lang === "hi" ? "ज़मीनी हलचल" : "On the Ground"}
+              </h2>
+              <p className={`text-bharat-ink/70 mt-3 text-lg ${hiClass}`}>
+                {lang === "hi" ? "रैलियाँ • बैठकें • नामांकन • जन-संपर्क" : "Rallies • Meetings • Nominations • Outreach"}
+              </p>
+            </div>
+            <Link to="/gallery" className="inline-flex items-center gap-2 text-bharat-blue font-bold hover:text-saffron" data-testid="home-gallery-view-all">
+              <Camera size={16} /> {lang === "hi" ? "सभी तस्वीरें" : "View Gallery"} <ChevronRight size={16} />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {GALLERY_PHOTOS.slice(0, 4).map((p, i) => (
+              <Link key={i} to="/gallery" className="group block aspect-square overflow-hidden bg-bharat-ink/5 border border-bharat-ink/10 hover:border-saffron" data-testid={`home-gallery-${i}`}>
+                <img src={p.src} alt={p.caption_en} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

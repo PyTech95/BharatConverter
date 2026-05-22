@@ -12,8 +12,10 @@ export default function Header() {
   const links = [
     { to: "/", label: t("nav_home") },
     { to: "/about", label: t("nav_about") },
+    { to: "/sankalp", label: t("nav_sankalp") },
     { to: "/leaders", label: t("nav_leaders") },
     { to: "/news", label: t("nav_news") },
+    { to: "/gallery", label: t("nav_gallery") },
     { to: "/contact", label: t("nav_contact") },
   ];
 
@@ -28,6 +30,9 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <span className="font-devanagari-body tracking-wide" data-testid="header-jaihind">
               {t("jai_hind")} • {t("vande_mataram")}
+            </span>
+            <span className="hidden lg:inline text-saffron font-semibold tracking-wide" data-testid="header-election-symbol">
+              {t("election_symbol")}
             </span>
           </div>
           <button

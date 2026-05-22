@@ -9,8 +9,10 @@ import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import PublicLayout from "./components/layout/PublicLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
+import SankalpPage from "./pages/SankalpPage";
 import LeadersPage from "./pages/LeadersPage";
 import NewsPage from "./pages/NewsPage";
+import GalleryPage from "./pages/GalleryPage";
 import JoinPage from "./pages/JoinPage";
 import ContactPage from "./pages/ContactPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
@@ -34,9 +36,11 @@ function App() {
               <Route path="/" element={<PublicLayout />}>
                 <Route index element={<HomePage />} />
                 <Route path="about" element={<AboutPage />} />
+                <Route path="sankalp" element={<SankalpPage />} />
                 <Route path="leaders" element={<LeadersPage />} />
                 <Route path="news" element={<NewsPage />} />
                 <Route path="news/:id" element={<NewsPage />} />
+                <Route path="gallery" element={<GalleryPage />} />
                 <Route path="join" element={<JoinPage />} />
                 <Route path="contact" element={<ContactPage />} />
               </Route>
