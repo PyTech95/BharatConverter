@@ -37,7 +37,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-bharat-ink/80 to-bharat-ink/40" />
         <div className="relative max-w-7xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("nav_contact")}</div>
-          <h1 className={`text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="contact-title">{t("contact_title")}</h1>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="contact-title">{t("contact_title")}</h1>
           <p className={`mt-4 text-lg text-white/85 max-w-2xl ${hiClass}`}>{t("contact_subtitle")}</p>
         </div>
       </section>

@@ -73,7 +73,7 @@ export default function NewsPage() {
       <section className="bg-bharat-ink text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("news_eyebrow")}</div>
-          <h1 className={`text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="news-page-title">{t("news_title")}</h1>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="news-page-title">{t("news_title")}</h1>
           <p className={`mt-4 text-lg text-white/75 max-w-2xl ${hiClass}`}>{t("news_desc")}</p>
         </div>
       </section>

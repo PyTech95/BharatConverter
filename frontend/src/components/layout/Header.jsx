@@ -25,23 +25,24 @@ export default function Header() {
       <div className="tricolor-strip-horizontal h-1 w-full" />
 
       {/* Top utility bar */}
-      <div className="bg-bharat-ink text-white border-b border-bharat-ink hidden md:block">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-4">
-            <span className="font-devanagari-body tracking-wide" data-testid="header-jaihind">
+      <div className="bg-bharat-ink text-white border-b border-bharat-ink">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-1.5 sm:py-2 flex items-center justify-between text-[10px] sm:text-xs gap-2">
+          <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1">
+            <span className="font-devanagari-body tracking-wide whitespace-nowrap" data-testid="header-jaihind">
               {t("jai_hind")} • {t("vande_mataram")}
             </span>
-            <span className="hidden lg:inline text-saffron font-semibold tracking-wide" data-testid="header-election-symbol">
+            <span className="hidden md:inline text-saffron font-semibold tracking-wide whitespace-nowrap" data-testid="header-election-symbol">
               {t("election_symbol")}
             </span>
           </div>
           <button
             onClick={toggle}
-            className="flex items-center gap-2 hover:text-saffron transition-colors btn-sharp px-3 py-1"
+            className="flex items-center gap-1 sm:gap-2 hover:text-saffron transition-colors btn-sharp px-2 sm:px-3 py-1 shrink-0"
             data-testid="lang-toggle-top"
             aria-label="Toggle Language"
           >
-            <Languages size={14} />
+            <Languages size={12} className="sm:hidden" />
+            <Languages size={14} className="hidden sm:block" />
             <span className="font-semibold">{lang === "hi" ? "English" : "हिन्दी"}</span>
           </button>
         </div>
@@ -49,16 +50,16 @@ export default function Header() {
 
       {/* Main nav */}
       <header className="sticky top-0 z-50 bg-bharat-cream/90 backdrop-blur-xl border-b-2 border-bharat-ink" data-testid="main-header">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 group" data-testid="header-logo-link">
-              <img src={PARTY_LOGO} alt="Buland Bharat" className="h-14 w-14 object-contain group-hover:scale-105 transition-transform" />
-              <div className="hidden sm:block">
-                <div className={`text-bharat-ink font-bold leading-none ${lang === "hi" ? "font-devanagari-heading text-xl" : "font-english-heading text-2xl"}`}>
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group min-w-0" data-testid="header-logo-link">
+              <img src={PARTY_LOGO} alt="Buland Bharat" className="h-12 w-12 sm:h-14 sm:w-14 object-contain shrink-0 group-hover:scale-105 transition-transform" />
+              <div className="min-w-0">
+                <div className={`text-bharat-ink font-bold leading-tight truncate ${lang === "hi" ? "font-devanagari-heading text-base sm:text-xl" : "font-english-heading text-lg sm:text-2xl"}`}>
                   {t("party_name")}
                 </div>
-                <div className="text-xs text-bharat-blue tracking-widest uppercase mt-1 font-semibold">
+                <div className="text-[10px] sm:text-xs text-bharat-blue tracking-widest uppercase mt-0.5 sm:mt-1 font-semibold">
                   {lang === "hi" ? "B.B.P." : "बु.भा.पा."}
                 </div>
               </div>

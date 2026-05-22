@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-bharat-ink/70 to-bharat-ink" />
         <div className="relative max-w-5xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("about_eyebrow")}</div>
-          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] ${hiHeadingClass}`} data-testid="about-title">{t("about_title")}</h1>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05] ${hiHeadingClass}`} data-testid="about-title">{t("about_title")}</h1>
           <p className={`mt-6 text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed ${hiClass}`}>
             {lang === "hi"
               ? "एकता में शक्ति, सौहार्द में प्रगति — भारत जैसे विशाल और विविधताओं से भरे देश को एक सूत्र में पिरोने के लिए बुलंद भारत पार्टी का गठन किया गया है।"

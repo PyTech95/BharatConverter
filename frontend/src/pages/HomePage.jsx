@@ -8,10 +8,12 @@ export default function HomePage() {
   const { lang, t } = useLang();
   const [news, setNews] = useState([]);
   const [memberCount, setMemberCount] = useState(0);
+  const [leaders, setLeaders] = useState([]);
 
   useEffect(() => {
     api.get("/news").then(({ data }) => setNews(data.slice(0, 3))).catch(() => {});
     api.get("/membership/count").then(({ data }) => setMemberCount(data.count || 0)).catch(() => {});
+    api.get("/leaders").then(({ data }) => setLeaders(data)).catch(() => {});
   }, []);
 
   const hiClass = lang === "hi" ? "font-devanagari-body" : "font-english-body";
@@ -41,7 +43,7 @@ export default function HomePage() {
                 {t("hero_eyebrow")}
               </span>
             </div>
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 ${hiHeadingClass}`} data-testid="hero-title">
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 ${hiHeadingClass}`} data-testid="hero-title">
               <span className="block text-white">{t("hero_title_1")}</span>
               <span className="block text-saffron">{t("hero_title_2")}</span>
             </h1>
@@ -83,9 +85,9 @@ export default function HomePage() {
               { num: "28", label: t("hero_stat_2") },
               { num: "15+", label: t("hero_stat_3") },
             ].map((s, i) => (
-              <div key={i} className="py-8 px-4 text-center" data-testid={`hero-stat-${i}`}>
-                <div className={`text-4xl md:text-5xl font-bold text-saffron ${hiHeadingClass}`}>{s.num}</div>
-                <div className={`text-xs md:text-sm text-white/70 uppercase tracking-wider mt-2 ${hiClass}`}>{s.label}</div>
+              <div key={i} className="py-6 sm:py-8 px-2 sm:px-4 text-center" data-testid={`hero-stat-${i}`}>
+                <div className={`text-3xl sm:text-4xl md:text-5xl font-bold text-saffron ${hiHeadingClass}`}>{s.num}</div>
+                <div className={`text-[10px] sm:text-xs md:text-sm text-white/70 uppercase tracking-wider mt-1 sm:mt-2 ${hiClass}`}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -145,6 +147,51 @@ export default function HomePage() {
           <div className="tricolor-strip-horizontal h-1 w-32 mx-auto mt-8" />
         </div>
       </section>
+
+      {/* LEADERS SECTION */}
+      {leaders.length > 0 && (
+        <section className="py-16 md:py-24 bg-white" data-testid="home-leaders-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
+              <div>
+                <div className={`text-sm uppercase tracking-[0.3em] text-saffron font-bold mb-3 editorial-line ${hiClass}`}>
+                  {t("leaders_eyebrow")}
+                </div>
+                <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-bharat-ink ${hiHeadingClass}`}>
+                  {t("leaders_title")}
+                </h2>
+                <p className={`text-bharat-ink/70 mt-3 text-base md:text-lg ${hiClass}`}>{t("leaders_desc")}</p>
+              </div>
+              <Link to="/leaders" className="inline-flex items-center gap-2 text-bharat-blue font-bold hover:text-saffron" data-testid="home-leaders-view-all">
+                {lang === "hi" ? "पूरी सूची" : "View All"} <ChevronRight size={16} />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+              {leaders.map((l, i) => (
+                <Link
+                  key={l.id || i}
+                  to="/leaders"
+                  className="group block bg-bharat-cream border border-bharat-ink/10 hover:border-saffron transition-all"
+                  data-testid={`home-leader-${i}`}
+                >
+                  <div className="aspect-square bg-bharat-ink/5 overflow-hidden">
+                    <img src={l.image} alt={l.name_en} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                  <div className="p-3 md:p-4 text-center">
+                    <h3 className={`text-sm md:text-base font-bold text-bharat-ink leading-tight ${hiHeadingClass}`}>
+                      {lang === "hi" ? l.name_hi : l.name_en}
+                    </h3>
+                    <p className={`text-[10px] md:text-xs uppercase tracking-wider text-saffron font-bold mt-1 ${hiClass}`}>
+                      {lang === "hi" ? l.role_hi : l.role_en}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ELECTION SYMBOL + Sankalp teaser */}
       <section className="py-20 bg-bharat-cream relative" data-testid="symbol-section">

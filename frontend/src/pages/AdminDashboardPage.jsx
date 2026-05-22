@@ -108,28 +108,28 @@ export default function AdminDashboardPage() {
     <div className="min-h-screen bg-bharat-cream" data-testid="admin-dashboard">
       {/* Admin Top Bar */}
       <header className="bg-bharat-ink text-white border-b-2 border-saffron sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={PARTY_LOGO} alt="" className="h-10 w-10 object-contain" />
-            <div>
-              <div className={`text-base font-bold ${hiHeadingClass}`}>{t("admin_dashboard")}</div>
-              <div className="text-xs text-white/60">{user.email}</div>
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-2">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
+            <img src={PARTY_LOGO} alt="" className="h-9 w-9 sm:h-10 sm:w-10 object-contain shrink-0" />
+            <div className="min-w-0">
+              <div className={`text-sm sm:text-base font-bold truncate ${hiHeadingClass}`}>{t("admin_dashboard")}</div>
+              <div className="text-[10px] sm:text-xs text-white/60 truncate">{user.email}</div>
             </div>
           </Link>
-          <div className="flex items-center gap-2">
-            <button onClick={toggle} className="flex items-center gap-2 px-3 py-2 text-xs border border-white/30 hover:border-saffron hover:text-saffron" data-testid="admin-lang-toggle">
-              <Languages size={14} /> {lang === "hi" ? "EN" : "हि"}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <button onClick={toggle} className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs border border-white/30 hover:border-saffron hover:text-saffron" data-testid="admin-lang-toggle">
+              <Languages size={12} /> {lang === "hi" ? "EN" : "हि"}
             </button>
-            <button onClick={handleLogout} className="flex items-center gap-2 px-4 py-2 text-xs bg-saffron text-white font-bold hover:bg-saffron-dark" data-testid="admin-logout-btn">
-              <LogOut size={14} /> {t("admin_logout")}
+            <button onClick={handleLogout} className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs bg-saffron text-white font-bold hover:bg-saffron-dark" data-testid="admin-logout-btn">
+              <LogOut size={12} /> {t("admin_logout")}
             </button>
           </div>
         </div>
       </header>
 
       {/* Tabs */}
-      <div className="bg-white border-b border-bharat-ink/10">
-        <div className="max-w-7xl mx-auto px-6 flex gap-1">
+      <div className="bg-white border-b border-bharat-ink/10 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 flex gap-1 min-w-max">
           {[
             { key: "memberships", label: t("admin_memberships"), icon: Users, count: memberships.length },
             { key: "news", label: t("admin_news_manage"), icon: Newspaper, count: news.length },
@@ -138,20 +138,20 @@ export default function AdminDashboardPage() {
             <button
               key={tb.key}
               onClick={() => setTab(tb.key)}
-              className={`flex items-center gap-2 px-5 py-4 text-sm font-bold border-b-2 transition-colors ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-3 sm:py-4 text-xs sm:text-sm font-bold border-b-2 transition-colors whitespace-nowrap ${
                 tab === tb.key ? "border-saffron text-saffron" : "border-transparent text-bharat-ink/60 hover:text-bharat-ink"
               } ${hiClass}`}
               data-testid={`admin-tab-${tb.key}`}
             >
-              <tb.icon size={16} />
+              <tb.icon size={14} />
               {tb.label}
-              <span className="bg-bharat-ink/10 px-2 py-0.5 text-xs font-bold">{tb.count}</span>
+              <span className="bg-bharat-ink/10 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-bold">{tb.count}</span>
             </button>
           ))}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 py-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-10">
         {loading && <div className="text-bharat-ink/60 flex items-center gap-2"><Loader2 className="animate-spin" size={16} /> {t("loading")}</div>}
 
         {/* Memberships */}

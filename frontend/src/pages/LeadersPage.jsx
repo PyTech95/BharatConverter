@@ -20,7 +20,7 @@ export default function LeadersPage() {
       <section className="bg-bharat-ink text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("leaders_eyebrow")}</div>
-          <h1 className={`text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="leaders-title">{t("leaders_title")}</h1>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="leaders-title">{t("leaders_title")}</h1>
           <p className={`mt-4 text-lg text-white/75 max-w-2xl ${hiClass}`}>{t("leaders_desc")}</p>
         </div>
       </section>

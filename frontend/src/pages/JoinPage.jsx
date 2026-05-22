@@ -64,7 +64,7 @@ export default function JoinPage() {
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(${ASHOKA_TEXTURE})`, backgroundSize: "300px" }} />
         <div className="relative max-w-7xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("nav_join")}</div>
-          <h1 className={`text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="join-page-title">{t("join_title")}</h1>
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="join-page-title">{t("join_title")}</h1>
           <p className={`mt-4 text-lg text-white/80 max-w-2xl ${hiClass}`}>{t("join_subtitle")}</p>
         </div>
       </section>

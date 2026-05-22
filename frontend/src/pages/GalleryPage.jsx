@@ -14,7 +14,7 @@ export default function GalleryPage() {
       <section className="bg-bharat-ink text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`}>{t("nav_gallery")}</div>
-          <h1 className={`text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="gallery-title">
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl font-bold ${hiHeadingClass}`} data-testid="gallery-title">
             {lang === "hi" ? "पार्टी की झलकियाँ" : "Party Moments"}
           </h1>
           <p className={`mt-4 text-lg text-white/75 max-w-2xl ${hiClass}`}>

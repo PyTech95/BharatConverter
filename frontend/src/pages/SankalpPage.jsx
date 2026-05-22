@@ -129,7 +129,7 @@ export default function SankalpPage() {
           <div className={`text-saffron text-sm uppercase tracking-[0.3em] font-bold mb-4 editorial-line ${hiClass}`} data-testid="sankalp-eyebrow">
             {lang === "hi" ? "बुलंद भारत पार्टी" : "Buland Bharat Party"}
           </div>
-          <h1 className={`text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight ${hiHeadingClass}`} data-testid="sankalp-title">
+          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight ${hiHeadingClass}`} data-testid="sankalp-title">
             {lang === "hi" ? "विकास का संकल्प" : "Pledge of Development"}
           </h1>
           <p className={`mt-6 text-lg md:text-xl text-white/85 max-w-3xl leading-relaxed ${hiClass}`}>
