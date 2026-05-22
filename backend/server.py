@@ -349,6 +349,17 @@ async def startup():
             },
             {
                 "id": str(uuid.uuid4()),
+                "name_hi": "श्री अशोक चौहान",
+                "name_en": "Shri Ashok Chauhan",
+                "role_hi": "राष्ट्रीय कोषाध्यक्ष",
+                "role_en": "National Treasurer",
+                "bio_hi": "बुलंद भारत पार्टी के राष्ट्रीय कोषाध्यक्ष। वित्तीय पारदर्शिता और सुशासन के प्रबल पैरोकार।",
+                "bio_en": "National Treasurer of Buland Bharat Party. Strong advocate of financial transparency and good governance.",
+                "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/ztv00z6p_image.png",
+                "order": 3,
+            },
+            {
+                "id": str(uuid.uuid4()),
                 "name_hi": "श्री सत्य देव यादव",
                 "name_en": "Shri Satya Dev Yadav",
                 "role_hi": "फरीदाबाद लोकसभा उम्मीदवार",
@@ -356,10 +367,10 @@ async def startup():
                 "bio_hi": "फरीदाबाद लोकसभा क्षेत्र से बुलंद भारत पार्टी के उम्मीदवार। पूर्व सैनिक एवं समाज सेवक। चुनाव चिन्ह — गैस सिलेंडर।",
                 "bio_en": "Buland Bharat Party candidate from Faridabad Lok Sabha. Veteran and social worker. Election symbol — Gas Cylinder.",
                 "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/p1itt04j_image.png",
-                "order": 3,
+                "order": 4,
             },
         ])
-        logger.info("Seeded 3 leaders")
+        logger.info("Seeded 4 leaders")
 
     # Seed initial news if empty
     if await db.news.count_documents({}) == 0:
