@@ -163,8 +163,8 @@ export default function HomePage() {
             </h2>
             <p className={`mt-5 text-lg text-bharat-ink/80 leading-relaxed max-w-2xl ${hiClass}`}>
               {lang === "hi"
-                ? "बुलंद भारत पार्टी का चुनाव चिन्ह — गैस सिलेंडर। राष्ट्रीय अध्यक्ष एडवोकेट कुणाल कांत शर्मा के नेतृत्व में, फरीदाबाद लोकसभा क्षेत्र से उम्मीदवार श्री सत्य देव यादव।"
-                : "The election symbol of Buland Bharat Party — Gas Cylinder. Under the leadership of National President Advocate Kunal Kant Sharma, with Shri Satya Dev Yadav as candidate from Faridabad Lok Sabha."}
+                ? "बुलंद भारत पार्टी का चुनाव चिन्ह — गैस सिलेंडर। एडवोकेट कुणाल कांत शर्मा (राष्ट्रीय अध्यक्ष) के नेतृत्व में पार्टी देशभर में जनसेवा एवं संगठन-निर्माण में सक्रिय है।"
+                : "The election symbol of Buland Bharat Party — Gas Cylinder. Under the leadership of National President Advocate Kunal Kant Sharma, the party is active in public service and organisation-building across the country."}
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link to="/sankalp" className="inline-flex items-center gap-2 bg-bharat-ink text-white px-7 py-3.5 font-bold btn-sharp hover:bg-saffron" data-testid="home-sankalp-cta">
