@@ -1,0 +1,148 @@
+{
+  "theme_archetype": {
+    "domain": "Indian Political Party / National Movement",
+    "theme": "LIGHT",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Patriotic Editorial",
+    "rationale": "The political party needs to convey authority, clarity, and truth, leaning into high-contrast editorial storytelling. We infuse this with warm cream textures and deep bold blacks to ground the patriotic tricolor accents, avoiding the generic SaaS look. The tone must be bold, patriotic, and revolutionary."
+  },
+  "color_palette": {
+    "backgrounds": {
+      "main": "#FDFBF7",
+      "secondary": "#F5F5F0",
+      "dark_section": "#0A0A0A"
+    },
+    "text": {
+      "primary": "#0A0A0A",
+      "secondary": "#4A4A4A",
+      "on_dark": "#FFFFFF",
+      "on_primary": "#FFFFFF"
+    },
+    "brand": {
+      "primary": "#FF9933",
+      "primary_hover": "#E68A2E",
+      "secondary": "#138808",
+      "accent": "#1E40AF",
+      "neutral_border": "#E5E5E5"
+    }
+  },
+  "typography": {
+    "font_families": {
+      "hindi_heading": "'Tiro Devanagari Hindi', serif",
+      "hindi_body": "'Mukta', sans-serif",
+      "english_heading": "'Cormorant Garamond', serif",
+      "english_body": "'Inter', sans-serif"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl lg:text-6xl tracking-tight leading-none",
+      "h2": "text-3xl md:text-4xl tracking-tight",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-base md:text-lg leading-relaxed",
+      "small": "text-sm uppercase tracking-widest"
+    },
+    "rules": {
+      "headings": "Bold, dramatic. Use tight tracking for headings to build tension. 'जय हिन्द' or 'वंदे मातरम्' should be visually striking.",
+      "alignment": "Left-align dense text and editorial pieces. Center-align major hero slogans."
+    }
+  },
+  "layout_spacing": {
+    "strategy": "Editorial Magazine Layout",
+    "spacing_scale": "p-4, p-8, p-12, p-16, p-24, p-32",
+    "grid_patterns": {
+      "news_section": "Bento grid (col-span-12 / col-span-8 / col-span-4) with high contrast borders and tight gaps (gap-4 or gap-6).",
+      "leaders_grid": "Grid-cols-1 md:grid-cols-3 lg:grid-cols-4, utilizing the 'Tetris' or 'Control Room' grid philosophy."
+    },
+    "surfaces": {
+      "cards": "Minimal border-radius (rounded-sm or rounded-none). Flat backgrounds with 1px border. No soft SaaS shadows.",
+      "header": "Crystal Glassmorphism (backdrop-blur-xl bg-white/70) or Solid Cream with a bold bottom border.",
+      "footer": "Deep Black (#0A0A0A) background with massive typography."
+    }
+  },
+  "interactive_motion": {
+    "hover_states": "Crisp color shift or subtle lift (-translate-y-1). For buttons, primary color hover must be a darker/richer shade.",
+    "transitions": "transition-all duration-300 ease-in-out",
+    "animations": "Subtle fade-in and slide-up on scroll for editorial sections. No bouncy/distracting elements."
+  },
+  "components_strategy": {
+    "buttons": "Sharp corners (rounded-none or rounded-sm). Full opacity for primary CTA (Saffron). High contrast text.",
+    "navigation": "Top bar includes Logo, Links (Home, About, Leaders, News, Contact), Language Toggle (Hindi/English), and 'Join Us' CTA.",
+    "language_toggle": "Prominent toggle button in header. Primary state is Hindi. State manages translation globally across the UI.",
+    "forms": "Use Shadcn components (Input, Textarea, Checkbox) heavily customized to look flat, border-b only, or sharp bordered boxes without rounded corners.",
+    "admin_panel": "Dense dashboard look. High contrast. Table-heavy view for Memberships and News CMS."
+  },
+  "media_assets": {
+    "logo_url": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/mqpq57l9_image.png",
+    "images": [
+      {
+        "id": "hero_crowd",
+        "url": "https://static.prod-images.emergentagent.com/jobs/922ef7bd-57eb-4f7e-b6bd-dba4d1fc641a/images/3e1f14e5d9f11b46627bb82763c40e76e3d931ab2bea546f2e36295a7806b80f.png",
+        "purpose": "Hero background image. Apply a bg-black/40 overlay.",
+        "alt": "Enthusiastic Indian political rally crowd"
+      },
+      {
+        "id": "ashoka_texture",
+        "url": "https://static.prod-images.emergentagent.com/jobs/922ef7bd-57eb-4f7e-b6bd-dba4d1fc641a/images/31d76fdea4b4b55d50d783ca9cfde9c7df152d55ad43aaa53f66a2ef9f92f178.png",
+        "purpose": "Background texture for About or Mission section. Use with low opacity or multiply blend mode.",
+        "alt": "Ashoka Chakra cream texture"
+      },
+      {
+        "id": "leader_placeholder",
+        "url": "https://static.prod-images.emergentagent.com/jobs/922ef7bd-57eb-4f7e-b6bd-dba4d1fc641a/images/4b59e1adacff8c9c82bbf7968ce3c4238ad3f7dd9ed13c2df5262d4e68a078bc.png",
+        "purpose": "Placeholder image for Party Leaders grid.",
+        "alt": "Indian politician portrait"
+      },
+      {
+        "id": "indian_flag_sky",
+        "url": "https://images.unsplash.com/photo-1709545900940-f86b833d5704?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmbGFnJTIwd2F2aW5nfGVufDB8fHx8MTc3OTQ1MjE2N3ww&ixlib=rb-4.1.0&q=85",
+        "purpose": "Decorative image for News or About section",
+        "alt": "Indian Flag waving in the sky"
+      },
+      {
+        "id": "parliament_building",
+        "url": "https://images.unsplash.com/photo-1760872645959-98d5fdb49287?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBwYXJsaWFtZW50JTIwYnVpbGRpbmd8ZW58MHx8fHwxNzc5NDUyMTY3fDA&ixlib=rb-4.1.0&q=85",
+        "purpose": "Background for Contact section or Footer",
+        "alt": "Indian Parliament building reflection"
+      }
+    ]
+  },
+  "pages_structure": {
+    "Home": {
+      "sections": ["Hero with Slogan", "Quick About (Mission)", "Latest News Highlights", "CTA: Join Us"]
+    },
+    "About": {
+      "sections": ["Party Ideology", "Vision & Mission", "History/Origins"]
+    },
+    "Leaders": {
+      "sections": ["National President", "Core Committee (Grid)"]
+    },
+    "News_Events": {
+      "sections": ["Editorial Layout grid mapping to dynamic DB entries (Admin fetched)"]
+    },
+    "Join_Us": {
+      "sections": ["Membership Form (Name, Phone, Email, Address, Message) -> Saves to MongoDB"]
+    },
+    "Contact": {
+      "sections": ["Office Address", "Phone/Email", "Embedded Map (or Placeholder)"]
+    },
+    "Admin": {
+      "sections": ["Login Auth", "Dashboard: Membership Submissions Table", "Dashboard: News CRUD (Create, Edit, Delete News cards)"]
+    }
+  },
+  "technical_requirements": {
+    "icons": "lucide-react (Flag, Users, Newspaper, Phone, Mail, Globe, Shield, ChevronRight)",
+    "database": "MongoDB required for Memberships and News",
+    "language_context": "Create a React Context for Language (en/hi) bridging texts. Render specific font classes based on current active language."
+  },
+  "testing_attributes": {
+    "rules": "All interactive and key informational elements MUST include a data-testid attribute.",
+    "convention": "kebab-case, role-based. e.g., data-testid='nav-join-button', data-testid='lang-toggle', data-testid='hero-cta'"
+  },
+  "instructions_to_main_agent": [
+    "Load Google Fonts for 'Tiro Devanagari Hindi', 'Mukta', 'Cormorant Garamond', and 'Inter' via index.css or Next.js head.",
+    "Implement a robust Language Context toggler that switches hardcoded Hindi text to English.",
+    "Construct the UI utilizing Tailwind classes strictly matching the color_palette variables. Customize tailwind.config.js appropriately.",
+    "Use Shadcn components but override their border-radius to be sharp (0px or 2px) to match the bold political vibe.",
+    "Hero image MUST use the provided URL (hero_crowd) with a dark overlay to ensure the logo and white/saffron typography pops.",
+    "Membership form must post to a /api/membership endpoint, integrating with MongoDB.",
+    "Admin routes must be protected, allowing basic CRUD for news and view access for Memberships."
+  ]
+}
