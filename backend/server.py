@@ -371,6 +371,17 @@ async def startup():
             },
             {
                 "id": str(uuid.uuid4()),
+                "name_hi": "एडवोकेट गुलशन तनेजा",
+                "name_en": "Advocate Gulshan Taneja",
+                "role_hi": "राष्ट्रीय संगठन सचिव",
+                "role_en": "National Organisation Secretary",
+                "bio_hi": "बुलंद भारत पार्टी के राष्ट्रीय संगठन सचिव। पेशे से अधिवक्ता। पार्टी ढाँचे को मज़बूत बनाने और कार्यकर्ताओं को एकजुट रखने में अग्रणी भूमिका।",
+                "bio_en": "National Organisation Secretary of Buland Bharat Party. Advocate by profession. Plays a leading role in strengthening the party structure and uniting workers.",
+                "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/hjuk0nve_image.png",
+                "order": 5,
+            },
+            {
+                "id": str(uuid.uuid4()),
                 "name_hi": "श्री सत्य देव यादव",
                 "name_en": "Shri Satya Dev Yadav",
                 "role_hi": "फरीदाबाद लोकसभा उम्मीदवार",
@@ -378,10 +389,10 @@ async def startup():
                 "bio_hi": "फरीदाबाद लोकसभा क्षेत्र से बुलंद भारत पार्टी के उम्मीदवार। पूर्व सैनिक एवं समाज सेवक। चुनाव चिन्ह — गैस सिलेंडर।",
                 "bio_en": "Buland Bharat Party candidate from Faridabad Lok Sabha. Veteran and social worker. Election symbol — Gas Cylinder.",
                 "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/p1itt04j_image.png",
-                "order": 5,
+                "order": 6,
             },
         ])
-        logger.info("Seeded 5 leaders")
+        logger.info("Seeded 6 leaders")
 
     # Seed initial news if empty
     if await db.news.count_documents({}) == 0:
