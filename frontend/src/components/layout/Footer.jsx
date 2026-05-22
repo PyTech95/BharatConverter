@@ -26,7 +26,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="md:col-span-5">
           <div className="flex items-center gap-3 mb-5">
-            <img src={PARTY_LOGO} alt="logo" className="h-16 w-16 object-contain bg-bharat-ink rounded-sm border border-white/20" />
+            <img src={PARTY_LOGO} alt="logo" className="h-16 w-16 object-contain" />
             <div>
               <div className={`text-2xl font-bold leading-tight ${lang === "hi" ? "font-devanagari-heading" : "font-english-heading"}`}>
                 {t("party_name")}

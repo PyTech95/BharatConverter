@@ -110,7 +110,7 @@ export default function AdminDashboardPage() {
       <header className="bg-bharat-ink text-white border-b-2 border-saffron sticky top-0 z-30">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={PARTY_LOGO} alt="" className="h-10 w-10 bg-bharat-ink rounded-sm" />
+            <img src={PARTY_LOGO} alt="" className="h-10 w-10 object-contain" />
             <div>
               <div className={`text-base font-bold ${hiHeadingClass}`}>{t("admin_dashboard")}</div>
               <div className="text-xs text-white/60">{user.email}</div>

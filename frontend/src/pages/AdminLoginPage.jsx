@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
 
         <div className="bg-bharat-cream border-t-4 border-saffron p-8 md:p-10">
           <div className="text-center mb-8">
-            <img src={PARTY_LOGO} alt="" className="h-16 w-16 mx-auto bg-bharat-ink rounded-sm mb-4" />
+            <img src={PARTY_LOGO} alt="" className="h-20 w-20 mx-auto object-contain mb-4" />
             <h1 className={`text-3xl font-bold text-bharat-ink ${hiHeadingClass}`}>{t("admin_login_title")}</h1>
             <p className={`text-bharat-ink/60 mt-2 text-sm ${hiClass}`}>{t("admin_login_desc")}</p>
           </div>

@@ -53,7 +53,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group" data-testid="header-logo-link">
-              <img src={PARTY_LOGO} alt="Buland Bharat" className="h-14 w-14 object-contain bg-bharat-ink rounded-sm group-hover:scale-105 transition-transform" />
+              <img src={PARTY_LOGO} alt="Buland Bharat" className="h-14 w-14 object-contain group-hover:scale-105 transition-transform" />
               <div className="hidden sm:block">
                 <div className={`text-bharat-ink font-bold leading-none ${lang === "hi" ? "font-devanagari-heading text-xl" : "font-english-heading text-2xl"}`}>
                   {t("party_name")}

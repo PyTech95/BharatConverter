@@ -8,7 +8,7 @@ export const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-export const PARTY_LOGO = "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/mqpq57l9_image.png";
+export const PARTY_LOGO = "/logo.png";
 
 // Real party photos
 export const PHOTO_NOMINATION = "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/p1itt04j_image.png";
