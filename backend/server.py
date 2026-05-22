@@ -338,6 +338,17 @@ async def startup():
             },
             {
                 "id": str(uuid.uuid4()),
+                "name_hi": "एडवोकेट ज्ञानेंद्र त्यागी",
+                "name_en": "Advocate Gyanendra Tyagi",
+                "role_hi": "राष्ट्रीय उपाध्यक्ष",
+                "role_en": "National Vice President",
+                "bio_hi": "बुलंद भारत पार्टी के राष्ट्रीय उपाध्यक्ष। पेशे से अधिवक्ता, जनसेवा और संगठन-निर्माण में दीर्घ अनुभव।",
+                "bio_en": "National Vice President of Buland Bharat Party. Advocate by profession with long experience in public service and organisational work.",
+                "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/g463vvmg_image.png",
+                "order": 2,
+            },
+            {
+                "id": str(uuid.uuid4()),
                 "name_hi": "श्री सत्य देव यादव",
                 "name_en": "Shri Satya Dev Yadav",
                 "role_hi": "फरीदाबाद लोकसभा उम्मीदवार",
@@ -345,10 +356,10 @@ async def startup():
                 "bio_hi": "फरीदाबाद लोकसभा क्षेत्र से बुलंद भारत पार्टी के उम्मीदवार। पूर्व सैनिक एवं समाज सेवक। चुनाव चिन्ह — गैस सिलेंडर।",
                 "bio_en": "Buland Bharat Party candidate from Faridabad Lok Sabha. Veteran and social worker. Election symbol — Gas Cylinder.",
                 "image": "https://customer-assets.emergentagent.com/job_bharat-converter-hub/artifacts/p1itt04j_image.png",
-                "order": 2,
+                "order": 3,
             },
         ])
-        logger.info("Seeded 2 leaders")
+        logger.info("Seeded 3 leaders")
 
     # Seed initial news if empty
     if await db.news.count_documents({}) == 0:
